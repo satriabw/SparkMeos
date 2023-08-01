@@ -8,7 +8,6 @@ import org.mobiltydb.UDT.classes.TGeomPointInst;
 
 import java.sql.Timestamp;
 
-
 public class TGeomPointInstUDT extends UserDefinedType<TGeomPointInst> {
 
     @Override

@@ -3,8 +3,17 @@ package org.mobiltydb;
 import org.apache.spark.sql.*;
 import org.mobiltydb.UDT.classes.TGeomPointInst;
 
+import static jmeos.functions.functions.*;
+import static jmeos.functions.functions_old.meos_finalize;
+
+import jmeos.functions.functions_old;
+import jmeos.types.basic.tpoint.TPoint;
+import jmeos.types.temporal.TemporalValue;
+
 public class Main {
     public static void main(String[] args) {
+        meos_initialize("UTC");
+
         SparkSession spark = SparkSession
                 .builder()
                 .master("local[*]")
@@ -30,5 +39,6 @@ public class Main {
 
         // Stop the Spark session
         spark.stop();
+        meos_finalize();
     }
 }
