@@ -14,6 +14,9 @@ import java.text.SimpleDateFormat;
 import java.time.OffsetDateTime;
 import java.util.List;
 
+/**
+ * Implements TGeogPoint functions.
+ */
 public class TGeogPointUDF {
     public static UDF1<String, TGeogPoint> stringTGeogPoint = new UDF1<>() {
         @Override

@@ -6,6 +6,10 @@ import org.mobiltydb.UDF.General.PeriodSetUDF;
 import org.mobiltydb.UDT.PeriodSetUDT;
 
 public class PeriodSetUDFRegistrator {
+    /**
+     * Class to register functions associated with PeriodSet.
+     * @param spark: the SparkSession
+     */
     public static void registerUDFs(SparkSession spark){
         spark.udf().register("periodset_in", PeriodSetUDF.periodset_in, new PeriodSetUDT());
         spark.udf().register("union_periodset", PeriodSetUDF.union_periodset, new PeriodSetUDT());

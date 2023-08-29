@@ -12,6 +12,9 @@ import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
+/**
+ * Implement the functions associated to the TFloat.
+ */
 public class TFloatUDF {
     public static UDF1<String, TFloat> stringToTFloat = new UDF1<>() {
         @Override

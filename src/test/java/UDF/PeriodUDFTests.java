@@ -23,7 +23,7 @@ import static org.apache.spark.sql.functions.*;
  */
 public class PeriodUDFTests extends SparkTestUtils {
     @Test
-    public void testStringToPeriod(){
+    public void testStringToPeriod() throws SQLException{
         List<String> data = Arrays.asList("[2023-08-07 14:10:49+02, 2023-08-07 15:10:49+02]");
         Dataset<Row> df = spark.createDataset(data, Encoders.STRING()).toDF("stringPeriod");
         // Equivalent to spark.sql('SELECT stringToPeriod(period) FROM stringPeriod')

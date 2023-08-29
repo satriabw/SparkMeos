@@ -8,6 +8,9 @@ import org.mobiltydb.UDF.Period.PeriodUDFRegistrator;
 import static jmeos.functions.functions.meos_finalize;
 import static jmeos.functions.functions.meos_initialize;
 
+/**
+ * This class is used in the tests to instantiate one common spark session to run the tests through.
+ */
 public class SparkTestUtils {
 
     public static SparkSession spark;

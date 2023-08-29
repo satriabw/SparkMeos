@@ -7,7 +7,10 @@ import org.mobiltydb.UDF.Temporal.TFloatUDF;
 import org.mobiltydb.UDF.Temporal.TGeogPointUDF;
 import org.mobiltydb.UDT.*;
 
-public class TemporalUDFRegistrar {
+/**
+ * Register functions associated to Temporal data type.
+ */
+public class TemporalUDFRegistrator {
     public static void registerUDFs(SparkSession spark){
         spark.udf().register("stringToTFloat", TFloatUDF.stringToTFloat, new TFloatUDT());
         spark.udf().register("stringToTBox", TBoxUDF.stringToTBox, new TBoxUDT());

@@ -12,7 +12,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-
+/**
+ * Implements the UDT for PeriodSet.
+ */
 public class PeriodSetUDT extends MeosDatatype<PeriodSet> {
 
     @Override
